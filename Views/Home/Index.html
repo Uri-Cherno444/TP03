@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <h1>Ahorcado</h1>
+<p>La computadora elige una palabra secreta y muestra una línea por cada letra. El jugador debe adivinar la palabra proponiendo letras de a una. Si la letra está en la palabra, se revela en todas las posiciones donde aparece. Si no está, se suma un error. El juego termina cuando el jugador descubre todas las letras de la palabra o alcanza el límite de errores permitido.</p>
+
+</div>
+<section>
+    <div>
+        @ViewBag.palabra
+        <input type="hidden" id="palabra" value='@ViewBag.palabra'>
+    </div>
+</section>
+
