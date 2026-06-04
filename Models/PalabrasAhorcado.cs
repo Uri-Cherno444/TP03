@@ -22,6 +22,7 @@ public class PalabrasAhorcado{
     {
         Random random = new Random();
         int numeroAleatorio = random.Next(1,11);
+
         return palabras[numeroAleatorio];
     }
 
