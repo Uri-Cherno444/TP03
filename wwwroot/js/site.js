@@ -1,45 +1,64 @@
 ﻿let palabra = document.getElementById("palabra").value;
-let contenedor = document.getElementById("encriptado").value;
+let contenedor = document.getElementById("contenedor");
 let mensaje = document.getElementById("mensaje").value;
+let intentosRestantes = document.getElementById("intentosRestantes").value;
 let palabraOculta="";
-let intentosRestantes = 10;
- 
+cantidadEspacios();
+let letras = [];
+
         
 
 function cantidadEspacios()
 {
-    for(let i = 0; i <= palabra.Lenght; i++)
+    console.log(palabra)
+    for(item of palabra)
         {
-        contenedor.innerHTML += "_ ";
+        contenedor.innerHTML += " _ ";
         
         }
 }
 function verificarPalabra()
 {
-    
+    let intentos= 10;
     contenedor.innerHTML = "";
-    letra.push(document.getElementById("letra").value);    
+    letras.push(document.getElementById("letra").value.toUpperCase());
+    let letra = document.getElementById("letra").value.toUpperCase();
+    let x = false;
+
+    //letra.push(document.getElementById("letra").value);    
     for(const item of palabra)
         {
-            if(letra.includes(item))
+            if(letras.includes(item))
             {
-                contenedor.innerHTML += item += " ";
+                contenedor.innerHTML += item.toUpperCase() + " ";
 
             }else
                 {
-                    contenedor.innerHTML += "_ "
+                    contenedor.innerHTML += " _ " ;
+                }
+
+                if(letra === item){
+                    x= true;
+
                 }
         }
-
-    intentosRestantes-= 1;
-    
-    
-}
-function crearMensaje()
-{
-    if(intentosRestantes == 0 && palabra.indexOf("_")>=0)
+        if(!x){
+            for(let i = letras.length -1 ; i>= 0, i--;)
+                {
+                    if(letras[i] === letra)
+                        {
+                            letras.splice(i,1);
+                        }
+                }
+            intentos--;
+            intentosRestantes.innerHTML = "Intentos restantes" + intentos;
+        }
+        if(intentosRestantes == 0 && palabra.indexOf("_") >=0)
     {
-        mensaje = "Perdiste, volve a intentarlo"
+        mensaje.innerHTML("Perdiste, volve a intentarlo");
+        
     } else
-        mensaje = "Ganaste, felicidades";
+        mensaje.innerHTML("Ganaste, felicidades");
+
+    
 }

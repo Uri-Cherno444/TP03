@@ -18,7 +18,7 @@ public class HomeController : Controller
         PalabrasAhorcado palabra = new PalabrasAhorcado();
         ViewBag.palabra = palabra.ObtenerPalabra();
 
-        return View("Index");
+        return View();
     }
 
     public IActionResult Privacy()
