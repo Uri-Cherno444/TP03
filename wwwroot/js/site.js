@@ -1,7 +1,7 @@
 ﻿let palabra = document.getElementById("palabra").value;
 let contenedor = document.getElementById("contenedor");
 let mensaje = document.getElementById("mensaje").value;
-let intentosRestantes = document.getElementById("intentosRestantes").value;
+let intentosRestantes = document.getElementById("intentosRestantes");
 let palabraOculta="";
 cantidadEspacios();
 let letras = [];
@@ -24,7 +24,11 @@ function verificarPalabra()
     letras.push(document.getElementById("letra").value.toUpperCase());
     let letra = document.getElementById("letra").value.toUpperCase();
     let x = false;
-
+    console.log("letras:")
+    for(const item of letras)
+        {
+            console.log(item);
+        }
     //letra.push(document.getElementById("letra").value);    
     for(const item of palabra)
         {
@@ -39,14 +43,15 @@ function verificarPalabra()
 
                 if(letra === item){
                     x= true;
-
                 }
         }
         if(!x){
             for(let i = letras.length -1 ; i>= 0, i--;)
                 {
+
                     if(letras[i] === letra)
                         {
+                            console.log("letra borrada"+ letras[i]);
                             letras.splice(i,1);
                         }
                 }
