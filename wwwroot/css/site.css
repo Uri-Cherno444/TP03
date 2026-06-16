@@ -1,31 +1,59 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 40px;
+    text-align: center;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+h1 {
+    color: #1e3a5f;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+section {
+    margin-top: 20px;
+}
+
+#contenedor {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin: 30px 0;
+    min-height: 50px;
+}
+
+#letra {
+    width: 60px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1e88e5;
+    color: white;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+#intentosRestantes {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+#mensaje {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
 }
