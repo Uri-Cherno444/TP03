@@ -21,7 +21,7 @@ public class PalabrasAhorcado{
     public string ObtenerPalabra()
     {
         Random random = new Random();
-        int numeroAleatorio = random.Next(1,11);
+        int numeroAleatorio = random.Next(0,palabras.Count);
         Console.WriteLine(palabras[numeroAleatorio]);
 
         return palabras[numeroAleatorio];
